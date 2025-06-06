@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    
+  h2:
+    console:
+      enabled: false  # Disable H2 Console in production
+
+app:
+  jwt:
+    secret: ${JWT_SECRET}  # Set this in environment variables
+    expiration: ${JWT_EXPIRATION:86400000}
+
+logging:
+  level:
+    com.taskmanager: INFO
+    org.springframework: WARN
+    org.hibernate: WARN 
