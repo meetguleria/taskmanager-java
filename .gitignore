@@ -1,8 +1,38 @@
-HELP.md
+### Maven ###
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.properties
+
+### Java ###
+# Compiled class files
+*.class
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs
+hs_err_pid*
+replay_pid*
+
+### Spring Boot ###
+HELP.md
+.springBeans
+spring-configuration-metadata.json
 
 ### STS ###
 .apt_generated
@@ -14,10 +44,11 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
+out/
 
 ### NetBeans ###
 /nbproject/private/
@@ -31,17 +62,41 @@ build/
 
 ### VS Code ###
 .vscode/
+*.code-workspace
 
 ### Environment Files ###
 .env
-src/main/resources/application-dev.yml
-src/main/resources/application-prod.yml
-src/main/resources/application-local.yml
+.env.*
+src/main/resources/application-*.yml
+!src/main/resources/application.yml
+!src/main/resources/application-prod.yml.template
 
 ### Logs ###
 *.log
 logs/
+log/
+*.gz
 
 ### OS specific ###
 .DS_Store
-Thumbs.db 
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+### Test Reports ###
+test-output/
+reports/
+coverage/
+
+### Gradle ###
+.gradle/
+gradle-app.setting
+
+### Node (in case of frontend integration) ###
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log* 
